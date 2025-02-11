@@ -31,7 +31,7 @@ client.on(Events.MessageCreate, async (message) => {
     }
 
     if (author.id === process.env.RENOISME && content === '!verify') {
-        const ruleChannel = await guild.channels.fetch(process.env.ROLE_MESSAGE_CHANNEL_ID).catch(() => null);
+        const ruleChannel = await guild.channels.fetch(process.env.RULE_MESSAGE_CHANNEL_ID).catch(() => null);
         if (!ruleChannel || !ruleChannel.lastMessageId) {
             message.react('❌');
             return;
